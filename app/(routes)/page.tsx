@@ -1,8 +1,8 @@
 import getBillboard from "@/actions/get-billboard";
 import getProducts from "@/actions/get-products";
-import Billboard from "../components/billboard";
-import Container from "../components/ui/container";
-import ProductList from "../components/product-list";
+import Billboard from "../../components/billboard";
+import Container from "../../components/ui/container";
+import ProductList from "../../components/product-list";
 
 const HomePage = async () => {
   const billboard = await getBillboard("b1c7c088-ccd9-4857-af50-2b540b215896");
