@@ -10,7 +10,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, disabled, type = "button", ...props }, ref) => {
     return (
       <button
-        ref={ref}
         className={cn(
           `
         w-auto
@@ -29,6 +28,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
           //umozliwiamy nadpisywanie powyzszych klas
         )}
+        ref={ref}
+        {...props} //na dynamiczne propsy
       >
         {children}
       </button>
