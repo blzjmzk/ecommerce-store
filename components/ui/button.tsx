@@ -28,6 +28,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className
           //umozliwiamy nadpisywanie powyzszych klas
         )}
+        disabled={disabled}
         ref={ref}
         {...props} //na dynamiczne propsy
       >

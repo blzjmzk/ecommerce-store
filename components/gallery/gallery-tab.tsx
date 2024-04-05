@@ -2,6 +2,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Image as ImageType } from "@/types";
 import { Tab } from "@headlessui/react";
+
 interface GalleryTabProps {
   image: ImageType;
 }
