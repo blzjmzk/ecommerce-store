@@ -5,6 +5,8 @@ import Container from "../../components/ui/container";
 import ProductList from "../../components/product-list";
 import Notification from "./notification";
 
+export const revalidate = 0;
+
 const HomePage = async () => {
   const billboard = await getBillboard("b1c7c088-ccd9-4857-af50-2b540b215896");
   const products = await getProducts({ isFeatured: true });
@@ -21,7 +23,5 @@ const HomePage = async () => {
     </Container>
   );
 };
-
-export const dynamic = "force dynamic";
 
 export default HomePage;

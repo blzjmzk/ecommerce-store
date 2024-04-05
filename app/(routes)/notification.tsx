@@ -7,8 +7,10 @@ import toast from "react-hot-toast";
 
 const Notification = () => {
   const [showNotification, setShowNotification] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const isNotificationShown = localStorage.getItem("isNotificationShown");
     if (!isNotificationShown && showNotification) {
       setTimeout(() => {
@@ -34,6 +36,10 @@ const Notification = () => {
       }, 1000);
     }
   }, [showNotification]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return null;
 };
