@@ -28,7 +28,7 @@ const CartPage = () => {
           <h1 className="text-3xl font-bold text-black">Shopping Cart</h1>
         </div>
         <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 px-4">
             {cart.items.length === 0 && (
               <p className="text-neutral-500 text-center">
                 No items added to cart
